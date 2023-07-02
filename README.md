@@ -1,1 +1,1 @@
-https://aviasales-final-cu3g.vercel.app/
+https://blog-react-topaz-beta.vercel.app/
