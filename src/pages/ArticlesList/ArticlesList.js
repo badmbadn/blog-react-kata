@@ -9,8 +9,6 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Spinner from '../../components/Spinner/Spinner';
 import { getArticlesList, setCurrentPage } from '../../store';
 
-// import classes from './ArticlesList.module.scss';
-
 const List = styled.ul`
   margin: 5px 0 0;
   padding: 0;

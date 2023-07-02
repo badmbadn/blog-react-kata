@@ -5,8 +5,6 @@ import styled from 'styled-components';
 
 import { clearArticleError } from '../../store';
 
-// import classes from './ArticleForm.module.scss';
-
 const FormArticle = styled.form`
   display: flex;
   flex-direction: column;
