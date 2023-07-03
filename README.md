@@ -1,1 +1,1 @@
-blog-react-kata.vercel.app
+https://blog-react-kata.vercel.app/
