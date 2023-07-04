@@ -124,7 +124,11 @@ function Layout() {
       {user.userName && (
         <LinkProfile to={PROFILE}>
           {user.userName}
-          {user.image && <Avatar src={user.image} alt="user avatar" onError={(e) => (e.target.src = placeholder)} />}
+          <Avatar
+            src={user.image ? user.image : 'https://static.productionready.io/images/smiley-cyrus.jpg'}
+            alt="user avatar"
+            onError={(e) => (e.target.src = placeholder)}
+          />
         </LinkProfile>
       )}
 
