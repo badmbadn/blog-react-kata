@@ -1,1 +1,1 @@
-https://blog-react-topaz-beta.vercel.app/
+https://blog-react-kata.vercel.app/
