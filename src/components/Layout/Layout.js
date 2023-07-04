@@ -101,6 +101,7 @@ function Layout() {
   const navigate = useNavigate();
 
   const user = useSelector((state) => state.authorization);
+  const userName = useSelector((state) => state.authorization.userName);
 
   return (
     <Header>
@@ -123,7 +124,7 @@ function Layout() {
 
       {user.userName && (
         <LinkProfile to={PROFILE}>
-          {user.userName}
+          {userName}
           <Avatar
             src={user.image ? user.image : 'https://static.productionready.io/images/smiley-cyrus.jpg'}
             alt="user avatar"
