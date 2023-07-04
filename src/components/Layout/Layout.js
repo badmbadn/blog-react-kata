@@ -111,7 +111,7 @@ function Layout() {
           dispatch(
             getArticlesList({
               pageNumber: 1,
-              token: user.userName ? user.token : null,
+              token: userName ? user.token : null,
             })
           );
           dispatch(setCurrentPage(1));
@@ -120,9 +120,9 @@ function Layout() {
         Realworld Blog
       </HomeLink>
 
-      {user.userName && <ButtonCreate onClick={() => navigate(CREATE)}>Create article</ButtonCreate>}
+      {userName && <ButtonCreate onClick={() => navigate(CREATE)}>Create article</ButtonCreate>}
 
-      {user.userName && (
+      {userName && (
         <LinkProfile to={PROFILE}>
           {userName}
           <Avatar
@@ -133,7 +133,7 @@ function Layout() {
         </LinkProfile>
       )}
 
-      {user.userName && (
+      {userName && (
         <ButtonLogOut
           onClick={() => {
             dispatch(logOut());
@@ -144,7 +144,7 @@ function Layout() {
         </ButtonLogOut>
       )}
 
-      {!user.userName && (
+      {!userName && (
         <ButtonSignIn
           onClick={() => {
             navigate(SIGNIN);
@@ -154,7 +154,7 @@ function Layout() {
         </ButtonSignIn>
       )}
 
-      {!user.userName && (
+      {!userName && (
         <ButtonSignUp
           onClick={() => {
             navigate(SIGNUP);
