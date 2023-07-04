@@ -101,6 +101,7 @@ function Layout() {
   const navigate = useNavigate();
 
   const user = useSelector((state) => state.authorization);
+  const image = useSelector((state) => state.authorization.image);
 
   return (
     <Header>
@@ -124,7 +125,7 @@ function Layout() {
       {user.userName && (
         <LinkProfile to={PROFILE}>
           {user.userName}
-          {user.image && <Avatar src={user.image} alt="user avatar" onError={(e) => (e.target.src = placeholder)} />}
+          <Avatar src={image ? image : placeholder} alt="user avatar" />
         </LinkProfile>
       )}
 
