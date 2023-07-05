@@ -70,7 +70,7 @@ function EditProfile() {
         label="New password"
         warrning="Password must be between 6 and 40 characters"
         required={true}
-        autocomplete="on"
+        autoComplete="on"
       />
 
       <AvatarUrl control={control} required={false} />
