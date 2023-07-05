@@ -107,7 +107,7 @@ function Input({ label, placeholder, fieldProps, error, warrning }) {
   return (
     <>
       <Label>{label}</Label>
-      <InputField placeholder={placeholder} {...fieldProps} bord={error} />
+      <InputField placeholder={placeholder} {...fieldProps} bord={error} autocomplete="on" />
       <Section>{warrning}</Section>
     </>
   );
