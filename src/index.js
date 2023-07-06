@@ -11,9 +11,9 @@ const Global = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter';
 }
 body {
+  font-family: 'Inter Regular', sans-serif;
   background-color: #ebeef3;
 }
 a {

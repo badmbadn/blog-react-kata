@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Label = styled.label`
   font-size: 14px;
+  font-family: 'Roboto-Regular', sans-serif;
   line-height: 22px;
 `;
 
@@ -12,8 +13,10 @@ const InputField = styled.input`
   margin-bottom: 12px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
+  font-family: 'Roboto-Regular', sans-serif;
   font-size: 16px;
-  line-height: 22px;
+  font-weight: 400;
+  line-height: 24px;
   &::placeholder {
     color: #8c8c8c;
   }
@@ -41,6 +44,7 @@ const Section = styled.section`
   margin-bottom: 12px;
   color: #f5222d;
   text-align: left;
+  font-family: 'Roboto-Regular', sans-serif;
   font-size: 14px;
   line-height: 22px;
 `;
@@ -48,6 +52,7 @@ const Section = styled.section`
 const LabelCheckBox = styled.label`
   display: flex;
   align-items: flex-start;
+  font-family: 'Roboto-Regular', sans-serif;
   margin-top: 9px;
   margin-bottom: 21px;
   padding-top: 8px;
@@ -61,6 +66,7 @@ const LabelCheckBox = styled.label`
 `;
 
 const InputCheckBox = styled.input`
+  font-family: 'Roboto-Regular', sans-serif;
   margin: 0;
   margin-right: 8px;
   margin-top: 4px;
@@ -72,6 +78,7 @@ const FormFields = styled.form`
   align-self: center;
   padding: 48px 32px;
   margin-top: 20px;
+  font-family: 'Roboto-Medium', sans-serif;
   width: 340px;
   font-size: 16px;
   border: 1px solid #d9d9d9;
@@ -85,6 +92,7 @@ const FormFields = styled.form`
 
 const Footer = styled.footer`
   margin-top: -4px;
+  font-family: 'Roboto-Regular', sans-serif;
   font-size: 12px;
   line-height: 20px;
   text-align: center;
@@ -98,16 +106,30 @@ const Footer = styled.footer`
 const SubTitle = styled.h2`
   margin-block-start: 0;
   margin-block-end: 21px;
+  font-family: 'Roboto-Medium', sans-serif;
   font-size: 20px;
   line-height: 28px;
   text-align: center;
 `;
 
+const Error = styled.p`
+  color: red;
+  margin-bottom: 10px;
+`;
+
+function InfoError() {
+  return (
+    <>
+      <Error>Incorrect information.</Error>
+    </>
+  );
+}
+
 function Input({ label, placeholder, fieldProps, error, warrning }) {
   return (
     <>
       <Label>{label}</Label>
-      <InputField placeholder={placeholder} {...fieldProps} bord={error} autoComplete="on" />
+      <InputField placeholder={placeholder} {...fieldProps} autoComplete="on" className={error && { color: 'red' }} />
       <Section>{warrning}</Section>
     </>
   );
@@ -254,4 +276,4 @@ function Form({ title, children, footer, onSubmit }) {
 
 export default Form;
 
-export { Checkbox, Email, Input, AvatarUrl, Password, Submit, Username };
+export { Checkbox, Email, Input, AvatarUrl, Password, Submit, Username, InfoError };

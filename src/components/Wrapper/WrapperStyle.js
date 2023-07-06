@@ -7,8 +7,4 @@ const Main = styled.div`
   font-family: 'Inter', sans-serif;
 `;
 
-function Wrapper({ children }) {
-  return <Main>{children}</Main>;
-}
-
-export default Wrapper;
+export { Main };

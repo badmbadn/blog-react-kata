@@ -1,10 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Spin } from 'antd';
 
-const SpinnerContainer = styled.div`
-  margin-top: 50px;
-`;
+import { SpinnerContainer } from './SpinnerStyle';
 
 const Spinner = () => {
   return (

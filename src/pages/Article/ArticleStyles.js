@@ -1,0 +1,33 @@
+import styled from 'styled-components';
+
+const ArticleBody = styled.article`
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 24px;
+  border-radius: 5px;
+  min-height: calc(100vh - 200px);
+  background-color: #fff;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+`;
+
+const Info = styled.div`
+  display: grid;
+  grid-template-columns: 70% calc(30% - 58px) 58px;
+  grid-row-gap: 4px;
+`;
+
+const MarkDown = styled.div`
+  margin: 0;
+  &:first-child {
+    margin-block-start: 0;
+    margin-top: 20px;
+  }
+  & * {
+    color: rgba(0, 0, 0, 0.75);
+    word-break: break-all;
+  }
+  & img {
+    width: 100%;
+  }
+`;
+export { ArticleBody, Info, MarkDown };

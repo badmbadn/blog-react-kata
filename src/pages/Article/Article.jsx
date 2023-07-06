@@ -1,6 +1,5 @@
 /* eslint-disable react/no-children-prop */
 import { useEffect } from 'react';
-import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -12,36 +11,38 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Spinner from '../../components/Spinner/Spinner';
 import { getArticle } from '../../store';
 
-const ArticleBody = styled.article`
-  display: flex;
-  flex-direction: column;
-  padding: 15px 15px 24px;
-  border-radius: 5px;
-  min-height: calc(100vh - 200px);
-  background-color: #fff;
-  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
-`;
+import { ArticleBody, Info, MarkDown } from './ArticleStyles';
 
-const Info = styled.div`
-  display: grid;
-  grid-template-columns: 70% calc(30% - 58px) 58px;
-  grid-row-gap: 4px;
-`;
+// const ArticleBody = styled.article`
+//   display: flex;
+//   flex-direction: column;
+//   padding: 15px 15px 24px;
+//   border-radius: 5px;
+//   min-height: calc(100vh - 200px);
+//   background-color: #fff;
+//   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+// `;
 
-const MarkDown = styled.div`
-  margin: 0;
-  &:first-child {
-    margin-block-start: 0;
-    margin-top: 20px;
-  }
-  & * {
-    color: rgba(0, 0, 0, 0.75);
-    word-break: break-all;
-  }
-  & img {
-    width: 100%;
-  }
-`;
+// const Info = styled.div`
+//   display: grid;
+//   grid-template-columns: 70% calc(30% - 58px) 58px;
+//   grid-row-gap: 4px;
+// `;
+
+// const MarkDown = styled.div`
+//   margin: 0;
+//   &:first-child {
+//     margin-block-start: 0;
+//     margin-top: 20px;
+//   }
+//   & * {
+//     color: rgba(0, 0, 0, 0.75);
+//     word-break: break-all;
+//   }
+//   & img {
+//     width: 100%;
+//   }
+// `;
 
 function Article() {
   const dispatch = useDispatch();

@@ -7,8 +7,4 @@ const Message = styled.section`
   font-weight: bold;
 `;
 
-function ErrorMessage() {
-  return <Message>Server respone whith error.</Message>;
-}
-
-export default ErrorMessage;
+export { Message };

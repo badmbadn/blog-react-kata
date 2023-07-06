@@ -1,7 +1,6 @@
-/* eslint-disable import/named */
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 import { updateUserData } from '../../store';
@@ -10,7 +9,6 @@ import Form, { Email, AvatarUrl, Password, Submit, Username } from '../../compon
 
 function EditProfile() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const token = useSelector((state) => state.authorization.token);
   const userName = useSelector((state) => state.authorization.userName);
@@ -42,7 +40,6 @@ function EditProfile() {
         },
       })
     );
-    navigate('/');
   };
 
   if (!userName) return <Navigate to={SIGNIN} />;
