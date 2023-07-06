@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
