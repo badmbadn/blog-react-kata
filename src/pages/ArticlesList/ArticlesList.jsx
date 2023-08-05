@@ -19,6 +19,8 @@ function ArticlesList() {
   const articles = useSelector((state) => state.articlesList.articles);
   const error = useSelector((state) => state.articlesList.error);
 
+  console.log(articles);
+
   useEffect(() => {
     const data = {
       token,
