@@ -8,6 +8,7 @@ const NotFoundPage = () => {
     <Article>
       Page not found. Go back to <Link to="/">main page</Link>
       <p>go</p>
+      <p>go</p>
     </Article>
   );
 };
