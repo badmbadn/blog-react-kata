@@ -11,6 +11,7 @@ const NotFoundPage = () => {
       <p>goes</p>
       <p>goeing</p>
       <p>goeing down</p>
+      <p>goeing down!</p>
     </Article>
   );
 };
