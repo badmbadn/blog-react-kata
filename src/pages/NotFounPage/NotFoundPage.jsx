@@ -10,6 +10,7 @@ const NotFoundPage = () => {
       <p>go</p>
       <p>goes</p>
       <p>goeing</p>
+      <p>goeing down</p>
     </Article>
   );
 };
