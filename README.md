@@ -7,8 +7,4 @@ https://blog-react-kata.vercel.app/
 1223.
 dfsd
 erggreg.
-<<<<<<< HEAD
 ....o
-=======
-sdfewfsd
->>>>>>> 094a13fe71d2e483c2ca6286a4ce8c48e181a541
